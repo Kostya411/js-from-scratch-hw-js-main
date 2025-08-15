@@ -34,5 +34,14 @@ const gallery = {
   'Starry Night': 'Vincent van Gogh',
   'The Scream': 'Edvard Munch',
 }
+console.log(gallery["Mona Lisa"])
+function updateGallery(object, namePainting, infArtist) {
+   object[`${namePainting}`] = `${infArtist}`;
+}
 
-function updateGallery() {}
+
+
+
+
+
+
