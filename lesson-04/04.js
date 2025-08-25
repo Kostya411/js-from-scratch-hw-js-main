@@ -11,7 +11,7 @@
 
 Пример работы функции: `doubleEachCharacter('hello')` вернёт `'hheelllloo'`
 */
-
+debugger
 
 function doubleEachCharacter(str) {
     let strArr = str.split('');
