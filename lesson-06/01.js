@@ -25,11 +25,16 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 
 const filter = (array, callBack) => {
     let resultArray = [];
-    for (let index in array) {
-        if (callBack(array[index]))
-            resultArray.push(array[index]);
+    for (let index =0; index < array.length; index++) {
+        let element = array[index];
+        if (callBack(element, index)){
+            resultArray.push(element);
+        }
     }
     return resultArray;
 }
+
+
+
 
 
