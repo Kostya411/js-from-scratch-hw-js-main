@@ -68,3 +68,22 @@ clearCartButton.addEventListener('click', function () {
 })
 
 // Твой код:
+//Создаем переменную ограничивающую размер корзины
+const cartSize = 3;
+
+//Добавляем событие на родительский элемент зоомагазина, для выбора зверушки (делегирование)
+petShop.addEventListener('click', event => {
+  const targetPet = event.target; //Смотрим на какой элемент нажали, напоминаю себе что event.target возвращает элемент на который нажали
+
+  //Сделаем проверку на количество зверушек в корзине
+  if(cart.length < cartSize) {
+    //При нажатии на элемент с классом зверушки 'pet'
+    if(targetPet.classList.contains('pet')){
+      cart.push(event.target.id) //пушим в массив корзины cart по id
+      updateCartDisplay() //обновляем отображение корзины
+    }
+  } else //если корзина заполнена, то выводим сообщение
+  {
+    messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
+  }
+})
